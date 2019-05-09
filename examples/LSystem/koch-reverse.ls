@@ -1,0 +1,8 @@
+`(  (axiom       . "F--F--F" )
+    (angle       . 60  )
+    (line-length . 3  )
+    (iteration   . 4   )
+    (start-x     . 400 )
+    (start-y     . 400 )
+	(start-angle . 180 )
+	(rules       . ((#\F  . "F-F++F-F"))))

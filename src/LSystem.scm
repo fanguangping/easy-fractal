@@ -62,4 +62,5 @@
           (draw-fractal dc (cdr actions)))))
   (load-config config)
   (set! current-state (cons (cons *start-x* *start-y*) *start-angle*))
+  (send (send canvas get-dc) clear)
   (draw-fractal (send canvas get-dc) (string->list (generate-actions))))

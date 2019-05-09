@@ -31,7 +31,8 @@
 ; read config
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (define (read-config file-path)
-  (eval (read (open-input-string (file->string file-path)))))
+  (if file-path (eval (read (open-input-string (file->string file-path))))
+      '()))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; get assoc value

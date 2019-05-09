@@ -1,0 +1,8 @@
+`(  (axiom       . "F" )
+    (angle       . 20  )
+    (line-length . 10  )
+    (iteration   . 3   )
+    (start-x     . 500 )
+    (start-y     . 400 )
+	(start-angle . 180 )
+	(rules       . ((#\F  . "F[+F]F[-F]+F"))))

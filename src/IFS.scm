@@ -53,5 +53,6 @@
           (draw-fractal dc (- dots 1)))))
   (load-config config)
   (set! point (cons 0 0))
+  (send (send canvas get-dc) clear)
   (draw-fractal (send canvas get-dc) *dots*))
 

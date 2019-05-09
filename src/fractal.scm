@@ -10,6 +10,8 @@
   (define file-path (get-file "open fractal config file" main-frame))
   (define config (read-config file-path))
   (cond
+    ((equal? file-path #f)
+     '())
     ((equal? (path-get-extension file-path) #".ls")
      (draw-by-LSystem canvas config))
     ((equal? (path-get-extension file-path) #".ifs")
