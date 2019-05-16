@@ -1,0 +1,8 @@
+`(
+    (width        . 600       )
+    (height       . 400       )
+    (iteration    . 255       )
+	(scale-weight . (3.0 . 2.5) )
+	(scale-offset . (2.25 . 1.25) )
+    (color-depth  . (lambda (depth)
+                      (list (* 5 (modulo depth 15)) (* 32 (modulo depth 7)) (* 8 (modulo depth 31))))))

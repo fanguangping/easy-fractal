@@ -1,0 +1,12 @@
+`(
+    (width       . 200     )
+    (height      . 200     )
+    (iterations  . 10     )
+	(plane-type  . "two-dimensional"  )
+    (iterate     . (lambda (x y)
+                     (cond
+                       ((> y 0.5)  (cons (* 2 x) (- (* 2 y) 1)))
+                       ((>= x 0.5) (cons (- (* 2 x) 1) (* 2 y)))
+                       (else (cons (* 2 x) (* 2 y))))))
+    (boundary    . (lambda (x y)
+                     (> (+ (* x x) (* y y)) 25))))

@@ -1,0 +1,12 @@
+`(
+    (width        . 640       )
+    (height       . 480       )
+    (iteration    . 128       )
+	(init-number  . -0.7269+0.1889i )
+	(scale-weight . (1.5 . 1) )
+    (color-depth  . (lambda (depth)
+                      (let* ((x (/ depth 128))
+					         (r (min (* x 256) 255))
+							 (g (min (* (- (* x 256) r) 256) 255))
+							 (b (min (* (- (* (- (* x 256) r) x 256) g) 256) 255)))
+					    (list r g b)))))
